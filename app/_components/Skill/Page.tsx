@@ -5,11 +5,6 @@ import React, { useEffect, useState } from "react";
 import { createClient } from "microcms-js-sdk";
 import styles from "./Page.module.css";
 
-const client = createClient({
-  serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN!,
-  apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY!,
-});
-
 interface SkillItem {
   id: string;
   name: string;
@@ -29,6 +24,22 @@ const SkillSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Check if environment variables are available
+        if (
+          !process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN ||
+          !process.env.NEXT_PUBLIC_MICROCMS_API_KEY
+        ) {
+          console.warn("microCMS environment variables not configured");
+          setError("microCMS configuration not available");
+          return;
+        }
+
+        // Create client inside the component
+        const client = createClient({
+          serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN,
+          apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY,
+        });
+
         console.log("Fetching from endpoint: skills");
         const data = await client.get({ endpoint: "skills" });
         console.log("Data received:", data);
