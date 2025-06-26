@@ -1,0 +1,243 @@
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+}
+
+.contactText {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ccc;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: 700;
+}
+
+.subheading {
+  color: #bdbdbd;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.bookBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3rem;
+  padding: 1.1rem 3.5rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  transition: all 0.2s;
+}
+
+.bookBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.arrow {
+  margin-left: 0.7rem;
+  font-size: 1.3em;
+}
+
+.emailText {
+  color: #bdbdbd;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.emailText a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 0.2rem;
+}
+
+.emailText a:hover {
+  text-decoration: underline;
+}
+
+.socialSection {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialHeading {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px) scale(1.07);
+}
+
+.socialIcon svg {
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 1rem;
+  }
+  .content {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .subheading {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+  .bookBtn {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .arrow {
+    font-size: 1em;
+    margin-left: 0.4rem;
+  }
+  .emailText {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .socialSection {
+    margin-top: 1.2rem;
+  }
+  .socialHeading {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .socialIcons {
+    gap: 1.5rem;
+  }
+  .socialIcon {
+    width: 48px;
+    height: 48px;
+  }
+  .socialIcon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  .subheading {
+    font-size: 1rem;
+  }
+  .bookBtn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .emailText {
+    font-size: 0.9rem;
+  }
+  .socialIcons {
+    gap: 1rem;
+  }
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .socialIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
