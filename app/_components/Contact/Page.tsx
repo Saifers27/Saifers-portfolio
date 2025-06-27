@@ -23,7 +23,7 @@ const ContactSection = () => {
           Email me <span className={styles.arrow}>↗</span>
         </button>
         <div className={styles.emailText}>
-          Or Make a call <a href="tel:0906865342">+91 9068600000</a>
+          Or Make a call <a href="tel:09068653422">+91 9068600000</a>
         </div>
         <div className={styles.socialSection}>
           <h3 className={styles.socialHeading}>Follow me on social media!</h3>
@@ -50,7 +50,7 @@ const ContactSection = () => {
               </svg>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/Saifers_27"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}
@@ -71,8 +71,7 @@ const ContactSection = () => {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
-              target="_blank"
+              href="https://www.instagram.com/saifersrsl?igsh=ZDh5bGxtdzBvd3Y1&utm_source=qr"
               rel="noopener noreferrer"
               className={styles.socialIcon}
               aria-label="Instagram"
